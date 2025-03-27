@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đừng ấn vào đây</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        video {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            display: none; /* Ẩn video ban đầu */
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.7);
+        }
+        #warning {
+            display: none;
+            font-size: 20px;
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+            animation: shake 0.5s infinite alternate;
+        }
+        @keyframes shake {
+            0% { transform: translateX(-5px); }
+            100% { transform: translateX(5px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Website bí mật</h1>
+    <button id="trapButton" onclick="playVideo()">Đừng ấn vào đây</button>
+    <p id="warning">Đã bảo đừng ấn rồi mà!</p>
+    
+    <video id="rickroll" controls>
+        <source src="rickroll.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video.
+    </video>
+
+    <script>
+        function playVideo() {
+            let video = document.getElementById("rickroll");
+            let button = document.getElementById("trapButton");
+            let warning = document.getElementById("warning");
+
+            video.style.display = "block"; // Hiện video lên
+            video.play(); // Phát video
+            button.style.display = "none"; // Ẩn nút đỏ
+            warning.style.display = "block"; // Hiện chữ cảnh báo
+        }
+    </script>
+</body>
+</html>
