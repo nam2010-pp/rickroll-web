@@ -6,6 +6,28 @@ body {
     padding: 0;
 }
 
+button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+#video-container {
+    margin-top: 20px;
+}
+
+video {
+    width: 80%;
+    max-width: 600px;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -16,4 +38,3 @@ footer {
     font-size: 14px;
     color: gray;
 }
-
