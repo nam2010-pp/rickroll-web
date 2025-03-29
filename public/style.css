@@ -38,3 +38,7 @@ footer {
     font-size: 14px;
     color: gray;
 }
+#ad-container {
+    margin: 20px auto;
+    text-align: center;
+}
